@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-
+// todo 03 xUnit: Tests categorization
 namespace UnitTestCourse.Test
 {
     /*

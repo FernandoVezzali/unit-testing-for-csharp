@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-
+// todo 01 xUnit: Test Class and Test Method
 namespace UnitTestCourse.Test
 {
         /*
@@ -8,7 +8,7 @@ namespace UnitTestCourse.Test
 
         Class:     [TestFixture]       [TestClass]         
 
-        Method:    [Test]	           [TestMethod]	[Fact]
+        Method:    [Test]	           [TestMethod]	   [Fact]
 
         */
 

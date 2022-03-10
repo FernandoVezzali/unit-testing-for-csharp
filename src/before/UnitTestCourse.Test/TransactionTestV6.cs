@@ -1,6 +1,6 @@
 ﻿using System;
 using Xunit;
-
+// todo 06 xUnit: Handling exceptions when asserting
 namespace UnitTestCourse.Test
 {
     /*

@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 using Xunit.Abstractions;
-
+// todo 07 xUnit: Writing output
 namespace UnitTestCourse.Test
 {
     /*

@@ -1,7 +1,7 @@
 ﻿using Moq;
 using System;
 using Xunit;
-
+// todo 08 moq: Mocking external dependencies
 namespace UnitTestCourse.Test
 {
     public class AuthorizedTransactionTests

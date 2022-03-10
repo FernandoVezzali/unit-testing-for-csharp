@@ -18,7 +18,14 @@ namespace UnitTestCourse.Test
         [InlineData(-100, 0)]
         public void ShouldReturnCorrectAmount(int amountToSum, int expected)
         {
+            // Arrange
+            var transaction = new Transaction(Guid.NewGuid().ToString(), DateTime.Now, 100);
 
+            // Act
+            transaction.Sum(amountToSum);
+
+            // Assert
+            Assert.Equal(expected, actual: transaction.Amount);
         }
     }
 }

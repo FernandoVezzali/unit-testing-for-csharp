@@ -1,7 +1,9 @@
 # Basic unit testing course for csharp developers
 
 ## What is unit testing?
-It's the practice of writing code to test your code and then run those tests in an automated fashion.
+It's the practice of writing code to test your code and then run those tests in an automated fashion. A unit test is a test that exercises individual software components or methods, also known as "unit of work". Unit tests should only test code within the developer's control. 
+
+They **do not test infrastructure concerns**. Infrastructure concerns include interacting with databases, file systems, and network resources.
 
 ## Why learn unit testing?
 
@@ -20,3 +22,11 @@ The later a bug is caught in the software development lifecycle, the more costly
 - Tell if you have broken any functionality as you write new code
 - Allow you to refactor your code with confidence
 - Act as documentation about what your code does
+
+## The changes we make on a day-to-day basis can have huge impacts. For example:
+
+- Does your switch properly account for a new value you put in?
+- Do you know how many times you used that switch?
+- Did you properly account for case insensitive string comparisons?
+- Are you checking for nulls appropriately?
+- Does a throw exception get handled as you expected?

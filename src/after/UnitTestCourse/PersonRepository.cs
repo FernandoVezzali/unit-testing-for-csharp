@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Bogus;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace UnitTestCourse
 {
@@ -20,6 +22,19 @@ namespace UnitTestCourse
         public List<BasicPerson> GetTop(int numberOfRows)
         {
             return _database.GetAll().OrderBy(x => x.FirstName).Take(numberOfRows).ToList();
+        }
+
+        public async Task<List<BasicPerson>> GetAll()
+        {
+            List<BasicPerson> people = new Faker<BasicPerson>()
+                .RuleFor(c => c.Id, f => f.Random.Int())
+                .RuleFor(c => c.FirstName, f => f.Name.FirstName())
+                .RuleFor(c => c.LastName, f => f.Name.LastName())
+                .RuleFor(c => c.Email, f => f.Person.Email)
+                .RuleFor(c => c.DateOfBirth, f => f.Date.Past(5).Date)
+                .Generate(3);
+
+            return await Task.FromResult(people);
         }
     }
 

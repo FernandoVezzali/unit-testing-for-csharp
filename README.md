@@ -30,3 +30,23 @@ The later a bug is caught in the software development lifecycle, the more costly
 - Did you properly account for case insensitive string comparisons?
 - Are you checking for nulls appropriately?
 - Does a throw exception get handled as you expected?
+
+### Issues when restoring NuGet packages from Nuget.org
+
+If you are not sure about the nuget.exe location, you can download it from https://www.nuget.org/downloads
+
+If you use Windows, you can add this file to your PATH (under enviroment variables)
+
+Check if Nuget.org is listed by running the command:
+
+ `nuget trusted-signers list`
+
+ If Nuget.org does not show up in the list, you can add it:
+
+ `nuget trusted-signers Add -Name nuget.org`
+
+If Nuget.org was already there, try running:
+
+ `nuget trusted-signers sync -Name Nuget.org`
+
+ [Check the official documentation](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-trusted-signers#nuget-trusted-signers-sync--name-name)
